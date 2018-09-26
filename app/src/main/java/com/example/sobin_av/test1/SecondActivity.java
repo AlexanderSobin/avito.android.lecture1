@@ -3,6 +3,7 @@ package com.example.sobin_av.test1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
@@ -23,5 +24,6 @@ public class SecondActivity extends AppCompatActivity {
         int btcCount = getIntent().getIntExtra(KEY_BTC, 0);
         TextView statusText = findViewById(R.id.status_text);
         statusText.setText(getString(R.string.btc_status, btcCount));
+        Log.i("SECOND_ACTIVITY", "btcCount updated = " + btcCount);
     }
 }
